@@ -97,11 +97,11 @@ div.selected {
         <form class="form-horizontal">
           <div class="modal-body">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-            <h3>You are about to play the following game: <%= @game.sport %></h3><hr>
+            <h4>You are about to play the following game: <span class="sp-main-title"><%= @game.sport %></span></h4><hr>
             <% if @participating_user.empty? %>
-              <p>The price for this game is: $<%= @game.buy_in %></p><br />
+              <p class="sp-main-title">The price for this game is: <span class="sp-mini-title-green">$<%= @game.buy_in %><span></p><br />
             <% else %>
-              <p>You are about to edit your players</p>
+              <p class="sp-main-title">You are about to edit your players</p>
             <% end %>
             <p>Do you wish to continue?</p>
             <div class="modal-buttons">
@@ -113,15 +113,15 @@ div.selected {
       </div>
     </div>
   </div> <!-- End Play Modal -->
-  
+
   <div class="modal fade" id="no-money" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <form class="form-horizontal">
           <div class="modal-body">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-            <h3>You are not able to play the following game: <%= @game.sport %></h3><hr>
-            <p>The price for this game is: $<%= @game.buy_in %></p><br />
+            <h4>You are not able to play the following game: <span class="sp-main-title"><%= @game.sport %></span></h4><hr>
+            <p>The price for this game is: <span class="sp-mini-title">$<%= @game.buy_in %></span></p><br />
             <p>Please deposit more money on your account in order to play</p>
             <div class="modal-buttons">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

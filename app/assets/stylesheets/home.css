@@ -234,6 +234,13 @@ background-position: 0 -40px;
 	color: #b60f0f;
 	font-weight: bold;
 }
+.sp-mini-title-green {
+	color: #5cb85c;
+	font-weight: bold;
+}
+.title-sport {
+	color: #2a6496;
+}
 .about-pic {	
 	height: 250px;
 	width: 250px;
@@ -247,6 +254,16 @@ background-position: 0 -40px;
 	border: 1px solid #ccc;
 	padding: 2px;
 }
-.team-member {
+.center {
 	text-align: center;
+}
+#amount {
+	width: 250px;
+	display: inline-block;
+}
+.center label {
+	font-size: 20px;
+}
+.amount-padding {
+	padding-bottom: 375px;
 }

@@ -1,10 +1,11 @@
 <div class="container">
-<%= form_tag charges_path do %>
-  <div class="form-group">
-    <%= label_tag :amount, 'Amount:', class: "control-label" %>
-    <div class="controls">
-      <%= text_field_tag :amount, params[:amount], id: "amount" %>
-      <button class="stripe-test">Checkout</button>
+  <div class="center amount-padding">
+    <h3 class="sp-mini-title">Please enter the amount to deposit</h3><br />
+    <%= form_tag charges_path do %>
+    <div class="form-group">
+      <%= label_tag :amount, 'Amount:', class: "amount-label" %>
+        <%= text_field_tag :amount, params[:amount], id: "amount", class: "form-control" %><br /><br />
+        <button class="stripe-test btn btn-success"><strong>Deposit</strong></button>
     </div>
   </div>
 

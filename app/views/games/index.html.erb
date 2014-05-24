@@ -10,14 +10,20 @@
 				<%= image_tag("lebron.jpg", class: "main-pic") %>
 			</div>
 		</div>
-		<% if !user_signed_in? %>
-		<div class="row">
-			<div class="col-sm-12">
-				<p><%= link_to "Sign Up Now", sign_up_path, class: "btn btn-success btn-lg" %></p>
-				<p>OR</p>
-				<p><%= link_to "Sign In", sign_in_path, class: "btn btn-warning btn-lg" %></p>
+		<% if user_signed_in? %>
+			<div class="row">
+				<div class="col-sm-12">
+				<p><%= link_to "Go To Profile", "/#{current_user.username}", class: "btn btn-warning btn-lg" %> &nbsp;&nbsp; <%= link_to "Deposit Money", new_charge_path, class: "btn btn-success btn-lg" %></p>
+				</div>
 			</div>
-		</div>
+		<% else %>
+			<div class="row">
+				<div class="col-sm-12">
+					<p><%= link_to "Sign Up Now", sign_up_path, class: "btn btn-success btn-lg" %></p>
+					<p>OR</p>
+					<p><%= link_to "Sign In", sign_in_path, class: "btn btn-warning btn-lg" %></p>
+				</div>
+			</div>
 		<% end %>
 	</div>
 
